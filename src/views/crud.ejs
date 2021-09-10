@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <div class="col-6 alert alert-primary" role="alert">
+                    Create new user
+                </div>
+            </div>
+            <div class="col-8 mt-3">
+                <form action="/post-crud" method="POST">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputFirstName">first name</label>
+                          <input name="firstName" type="text" class="form-control" id="inputFirstName" placeholder="">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputLastName">last name</label>
+                          <input name="lastName" type="text" class="form-control" id="inputLastName" placeholder="">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Address</label>
+                      <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                          <label >phone number</label>
+                          <input name="phonenumber" type="text" class="form-control" placeholder="0123456789">
+                        </div>
+                        <div class="form-group col-3">
+                          <label for="inputState">Gender</label>
+                          <select name="gender" class="form-control">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-3">
+                          <label for="inputState">role</label>
+                          <select name="roleId" class="form-control">
+                            <option value="1">Admin</option>
+                            <option value="2">Doctor</option>
+                            <option value="3">Patient</option>
+                          </select>
+                        </div>
+                      </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">first name</th>
+                    <th scope="col">last name</th>
+                    <th scope="col">address</th>
+                    <th scope="col">option</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <% for(let i=0; i < data.length; i++) { %>
+                    <tr>
+                        <th scope="row"><%= data[i].id %></th>
+                        <td><%= data[i].email %></td>
+                        <td><%= data[i].firstName %></td>
+                        <td><%= data[i].lastName %></td>
+                        <td><%= data[i].address %></td>
+                        <td>
+                            <a href="/edit-crud?id=<%= data[i].id %>" style="text-decoration: none;">
+                                <button href="aksjdlkasd" type="button" class="btn btn-success">edit</button>
+                            </a>
+                            <a href="/delete-crud?id=<%= data[i].id %>">
+                              <button type="button" class="btn btn-danger">delete</button>
+                            </a>
+                        </td>
+                      </tr>
+                 <% } %>
+                </tbody>
+
+                <thead class="thead-dark">
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
